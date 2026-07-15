@@ -476,7 +476,8 @@ img {
 
 /* ===== Blog index ===== */
 .blog-index {
-  padding: 48px 0 96px;
+  padding-top: 48px;
+  padding-bottom: 96px;
 }
 
 .blog-index h1 {
@@ -1143,5 +1144,24 @@ img {
   }
   .page h1 {
     font-size: 28px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+  .blog-nav {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .blog-post {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .blog-card {
+    padding: 20px;
+  }
+  .blog-index {
+    padding-top: 32px;
+    padding-bottom: 64px;
   }
 }
