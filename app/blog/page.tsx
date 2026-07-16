@@ -11,6 +11,13 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'after-school-routine-for-kids',
+    date: 'July 16, 2026',
+    title: 'After School Routine for Kids: How to Manage Screen Time Without Arguments',
+    excerpt:
+      'The after-school hours are when screen time battles are most common. Here is a simple daily structure that helps kids transition from school to screen time — without the arguments.',
+  },
+  {
     slug: 'reduce-screen-time-for-kids',
     date: 'July 15, 2026',
     title: 'How to Reduce Screen Time for Kids: 5 Simple Habits That Actually Work',
