@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import Footer from '@/components/Footer'
 import PageNav from '@/components/PageNav'
 
@@ -16,6 +17,7 @@ const posts = [
     title: 'After School Routine for Kids: How to Manage Screen Time Without Arguments',
     excerpt:
       'The after-school hours are when screen time battles are most common. Here is a simple daily structure that helps kids transition from school to screen time — without the arguments.',
+    image: '/blog/after-school-routine-for-kids/hero.png',
   },
   {
     slug: 'reduce-screen-time-for-kids',
@@ -23,6 +25,7 @@ const posts = [
     title: 'How to Reduce Screen Time for Kids: 5 Simple Habits That Actually Work',
     excerpt:
       "If you're wondering how to reduce screen time for kids without constant arguments, here are five simple habits that help screen time become a natural part of the day.",
+    image: '/blog/5-tiny-habits/hero-living-room.png',
   },
 ]
 
@@ -34,9 +37,18 @@ export default function Blog() {
         <h1>Blog</h1>
         {posts.map((post) => (
           <Link key={post.slug} className="blog-card" href={`/blog/${post.slug}`}>
-            <div className="blog-card-meta">{post.date}</div>
-            <h2>{post.title}</h2>
-            <p>{post.excerpt}</p>
+            <Image
+              className="blog-card-image"
+              src={post.image}
+              alt={post.title}
+              width={680}
+              height={340}
+            />
+            <div className="blog-card-content">
+              <div className="blog-card-meta">{post.date}</div>
+              <h2>{post.title}</h2>
+              <p>{post.excerpt}</p>
+            </div>
           </Link>
         ))}
       </main>
