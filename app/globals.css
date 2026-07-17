@@ -605,6 +605,9 @@ img {
   font-size: 17px;
   font-style: italic;
 }
+.blog-post blockquote p {
+  margin: 0;
+}
 
 .blog-post-image {
   width: 100%;
