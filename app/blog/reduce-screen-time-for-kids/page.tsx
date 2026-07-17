@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import CldImg from '@/components/CldImg'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
 import BlogNav from '@/components/BlogNav'
@@ -7,35 +7,37 @@ import CarouselBuilder from '@/components/CarouselBuilder'
 import BlogCta from '@/components/BlogCta'
 import type { CarouselSlide } from '@/components/CarouselBuilder'
 
+const CDN = 'https://res.cloudinary.com/y59p8mph/image/upload'
+
 const carouselSlides: CarouselSlide[] = [
   {
     title: 'How to Reduce Screen Time for Kids',
-    image: '/blog/5-tiny-habits/hero-living-room.png',
+    image: `${CDN}/blog/5-tiny-habits/hero-living-room.png`,
     body: '5 simple habits that actually work — without daily battles.',
   },
   {
     title: 'Create a Before-Screen Routine',
-    image: '/blog/5-tiny-habits/playroom.png',
+    image: `${CDN}/blog/5-tiny-habits/playroom.png`,
     body: 'Before tablets or YouTube, encourage 1–2 simple activities. Small habits create natural transitions.',
   },
   {
     title: 'Keep It Simple',
-    image: '/blog/5-tiny-habits/reading-corner.png',
+    image: `${CDN}/blog/5-tiny-habits/reading-corner.png`,
     body: 'Skip the charts. Choose 1–2 tasks your child can complete every day. Consistency beats complexity.',
   },
   {
     title: 'Make It Predictable',
-    image: '/blog/5-tiny-habits/routine-board.png',
+    image: `${CDN}/blog/5-tiny-habits/routine-board.png`,
     body: 'When kids know what comes next, they ask less. Predictability reduces negotiations.',
   },
   {
     title: 'Celebrate the Habit',
-    image: '/blog/5-tiny-habits/bedroom.png',
+    image: `${CDN}/blog/5-tiny-habits/bedroom.png`,
     body: "Instead of 'you earned your tablet,' try 'I'm proud of how you remembered your routine.'",
   },
   {
     title: 'Let the Routine Do the Work',
-    image: '/blog/5-tiny-habits/evening-living-room.png',
+    image: `${CDN}/blog/5-tiny-habits/evening-living-room.png`,
     body: 'The best routines become automatic. Less negotiating, more following what they already know.',
   },
 ]
@@ -48,7 +50,7 @@ Save this and try one today 👇
 
 #screentime #kidsroutine #parentingtips #familylife #screentimekids`
 
-const OG_IMAGE = 'https://joinlilypad.com/blog/5-tiny-habits/hero-living-room.png'
+const OG_IMAGE = 'https://res.cloudinary.com/y59p8mph/image/upload/f_auto,q_auto/blog/5-tiny-habits/hero-living-room.png'
 const CANONICAL = 'https://joinlilypad.com/blog/reduce-screen-time-for-kids/'
 
 export const metadata: Metadata = {
@@ -98,9 +100,9 @@ export default function Post() {
         <div className="blog-post-meta">July 15, 2026</div>
         <h1>How to Reduce Screen Time for Kids: 5 Simple Habits That Actually Work</h1>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/5-tiny-habits/hero-living-room.png"
+          src="blog/5-tiny-habits/hero-living-room"
           alt="Cozy storybook-style living room at golden hour"
           width={1536}
           height={1024}
@@ -136,9 +138,9 @@ export default function Post() {
 
         <h2>1. Create a &ldquo;Before Screen Time&rdquo; Routine</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/5-tiny-habits/playroom.png"
+          src="blog/5-tiny-habits/playroom"
           alt="Beautiful playroom with toys neatly stored and a tablet waiting on a shelf"
           width={1536}
           height={1024}
@@ -177,9 +179,9 @@ export default function Post() {
 
         <h2>2. Keep the Routine Simple</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/5-tiny-habits/reading-corner.png"
+          src="blog/5-tiny-habits/reading-corner"
           alt="Cozy reading corner with books, teddy bear, toothbrush, and organized toys"
           width={1536}
           height={1024}
@@ -210,9 +212,9 @@ export default function Post() {
 
         <h2>3. Make Screen Time Predictable</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/5-tiny-habits/routine-board.png"
+          src="blog/5-tiny-habits/routine-board"
           alt="Hallway with an illustrated routine board"
           width={1536}
           height={1024}
@@ -244,9 +246,9 @@ export default function Post() {
 
         <h2>4. Celebrate Healthy Habits</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/5-tiny-habits/bedroom.png"
+          src="blog/5-tiny-habits/bedroom"
           alt="Peaceful child's bedroom with a glowing evening lamp and habit chart"
           width={1536}
           height={1024}
@@ -278,9 +280,9 @@ export default function Post() {
 
         <h2>5. Let the Routine Do the Work</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/5-tiny-habits/evening-living-room.png"
+          src="blog/5-tiny-habits/evening-living-room"
           alt="Cozy evening living room with books, blanket, and a tablet resting quietly"
           width={1536}
           height={1024}

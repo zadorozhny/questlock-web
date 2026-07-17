@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
+import CldImg from '@/components/CldImg'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
 import BlogNav from '@/components/BlogNav'
@@ -7,35 +7,37 @@ import CarouselBuilder from '@/components/CarouselBuilder'
 import BlogCta from '@/components/BlogCta'
 import type { CarouselSlide } from '@/components/CarouselBuilder'
 
+const CDN = 'https://res.cloudinary.com/y59p8mph/image/upload'
+
 const carouselSlides: CarouselSlide[] = [
   {
     title: 'After School Routine for Kids',
-    image: '/blog/after-school-routine-for-kids/hero.png',
+    image: `${CDN}/blog/after-school-routine-for-kids/hero.png`,
     body: 'A simple daily structure that ends screen time battles — before they start.',
   },
   {
     title: 'Decompress First',
-    image: '/blog/after-school-routine-for-kids/snack.png',
+    image: `${CDN}/blog/after-school-routine-for-kids/snack.png`,
     body: 'Give kids 15–20 minutes to unwind before anything else. Snack, play, talk. Then the afternoon begins.',
   },
   {
     title: 'Homework Before Screens',
-    image: '/blog/after-school-routine-for-kids/homework.png',
+    image: `${CDN}/blog/after-school-routine-for-kids/homework.png`,
     body: 'When effort comes before reward, kids stop fighting it. The routine does the reminding for you.',
   },
   {
     title: 'Set a Screen Time Window',
-    image: '/blog/after-school-routine-for-kids/screen-time-window.png',
+    image: `${CDN}/blog/after-school-routine-for-kids/screen-time-window.png`,
     body: 'Define when it starts and when it ends. Kids stop asking "how much longer?" because they already know.',
   },
   {
     title: 'Make the Routine Visible',
-    image: '/blog/after-school-routine-for-kids/routine-chart.png',
+    image: `${CDN}/blog/after-school-routine-for-kids/routine-chart.png`,
     body: 'A visual checklist removes the need for reminders. Kids check their own progress and feel proud of it.',
   },
   {
     title: 'Screen Time Comes Last',
-    image: '/blog/after-school-routine-for-kids/evening.png',
+    image: `${CDN}/blog/after-school-routine-for-kids/evening.png`,
     body: 'When screens are the final thing before dinner, they become a natural ending — not an interruption.',
   },
 ]
@@ -48,7 +50,7 @@ Save this for the next time they walk through the door asking for the iPad 📱
 
 #afterschool #kidsroutine #screentimetips #parentingtips #familyroutine`
 
-const OG_IMAGE = 'https://joinlilypad.com/blog/after-school-routine-for-kids/hero.png'
+const OG_IMAGE = 'https://res.cloudinary.com/y59p8mph/image/upload/f_auto,q_auto/blog/after-school-routine-for-kids/hero.png'
 const CANONICAL = 'https://joinlilypad.com/blog/after-school-routine-for-kids/'
 
 export const metadata: Metadata = {
@@ -99,9 +101,9 @@ export default function Post() {
         <div className="blog-post-meta">July 16, 2026</div>
         <h1>After School Routine for Kids: How to Manage Screen Time Without Arguments</h1>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/after-school-routine-for-kids/hero.png"
+          src="blog/after-school-routine-for-kids/hero"
           alt="Cozy home entryway with a child arriving home from school"
           width={1536}
           height={1024}
@@ -134,9 +136,9 @@ export default function Post() {
 
         <h2>1. Give Kids Time to Decompress First</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/after-school-routine-for-kids/snack.png"
+          src="blog/after-school-routine-for-kids/snack"
           alt="Child enjoying an afternoon snack at the kitchen table"
           width={1536}
           height={1024}
@@ -169,9 +171,9 @@ export default function Post() {
 
         <h2>2. Homework Before Screens</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/after-school-routine-for-kids/homework.png"
+          src="blog/after-school-routine-for-kids/homework"
           alt="Child doing homework at a tidy desk in a warm afternoon light"
           width={1536}
           height={1024}
@@ -195,9 +197,9 @@ export default function Post() {
 
         <h2>3. Set a Predictable Screen Time Window</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/after-school-routine-for-kids/screen-time-window.png"
+          src="blog/after-school-routine-for-kids/screen-time-window"
           alt="Simple wall clock showing afternoon time with a calm home setting"
           width={1536}
           height={1024}
@@ -226,9 +228,9 @@ export default function Post() {
 
         <h2>4. Make the Routine Visible</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/after-school-routine-for-kids/routine-chart.png"
+          src="blog/after-school-routine-for-kids/routine-chart"
           alt="Illustrated after-school routine chart displayed on a hallway wall"
           width={1536}
           height={1024}
@@ -251,9 +253,9 @@ export default function Post() {
 
         <h2>5. Put Screen Time at the End</h2>
 
-        <Image
+        <CldImg
           className="blog-post-image"
-          src="/blog/after-school-routine-for-kids/evening.png"
+          src="blog/after-school-routine-for-kids/evening"
           alt="Calm family evening scene with a tablet resting on a side table"
           width={1536}
           height={1024}
